@@ -8,6 +8,20 @@ const server = new McpServer({
   version: "1.0.0",
 });
 
+app.get("/sse", (req, res) => {
+  res.json({
+    jsonrpc: "2.0",
+    id: "test",
+    method: "JokesMcp",
+    params: {},
+    result: {
+      joke: "Chuck Norris doesn’t read books. He stares them down until he gets the information he wants."
+    },
+    error: null
+  });
+});
+
+
 // Get Chuck Norris joke tool
 const getChuckJoke = server.tool(
   "get-chuck-joke",
