@@ -121,6 +121,19 @@ app.post("/mcp", async (req: Request, res: Response) => {
   }
 });
 
+app.get("/sse", (req, res) => {
+  res.json({
+    jsonrpc: "2.0",
+    id: "joke-001",
+    method: "get-chuck-joke",
+    result: {
+      joke: "Chuck Norris doesn’t sleep. He waits."
+    },
+    error: null
+  });
+});
+
+
 app.get("/mcp", async (req: Request, res: Response) => {
   console.log("Received GET MCP request");
   res.writeHead(405).end(
