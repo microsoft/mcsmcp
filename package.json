@@ -21,7 +21,7 @@
   "description": "",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.11.1",
-    "express": "^5.1.0",
+    "express": "^5.2.1",
     "zod": "^3.24.4"
   },
   "devDependencies": {
